@@ -31,12 +31,16 @@ $(window).scroll(function () {
     $(".nav-new .ul .li").eq(1).addClass("active").siblings().removeClass("active")
   } else if($(document).scrollTop() >= $("#meun3").offset().top - 100 && $(document).scrollTop() < $("#meun4").offset().top - 100){
     $(".nav-new .ul .li").eq(2).addClass("active").siblings().removeClass("active")
-  } else if($(document).scrollTop() >= $("#meun4").offset().top - 100 && $(document).scrollTop() < $("#meun5").offset().top - 100){
+  } else if($(document).scrollTop() >= $("#meun4").offset().top - 100 && $(document).scrollTop() < $("#meun7").offset().top - 100){
     $(".nav-new .ul .li").eq(3).addClass("active").siblings().removeClass("active")
-  } else if($(document).scrollTop() >= $("#meun5").offset().top - 100 && $(document).scrollTop() < $("#meun6").offset().top - 300){
+  } else if($(document).scrollTop() >= $("#meun7").offset().top - 100 && $(document).scrollTop() < $("#meun8").offset().top - 100){
     $(".nav-new .ul .li").eq(4).addClass("active").siblings().removeClass("active")
-  } else if($(document).scrollTop() > $("#meun6").offset().top - 300){
+  } else if($(document).scrollTop() >= $("#meun8").offset().top - 100 && $(document).scrollTop() < $("#meun5").offset().top - 100){
     $(".nav-new .ul .li").eq(5).addClass("active").siblings().removeClass("active")
+  } else if($(document).scrollTop() >= $("#meun5").offset().top - 100 && $(document).scrollTop() < $("#meun6").offset().top - 300){
+    $(".nav-new .ul .li").eq(6).addClass("active").siblings().removeClass("active")
+  } else if($(document).scrollTop() > $("#meun6").offset().top - 300){
+    $(".nav-new .ul .li").eq(7).addClass("active").siblings().removeClass("active")
   }
 
   if ($(window).width() < 1100) {
@@ -81,6 +85,11 @@ $(function () {
       // $('.logo img').attr('src', './img/logo.svg');
     }
   }
+
+  // keynotes 文字展开、关闭
+  $(".z_sec7 .slide_txt_box").on("click", function () {
+    $(this).toggleClass("active");
+  })
 })
 
 
